@@ -1,0 +1,83 @@
+{
+  "publisher": "Andr3xDev",
+  "name": "abysal-theme",
+  "displayName": "Abysal Theme",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.15.0",
+  "description": "Abysal theme for VS Code",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-user/abysal-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/your-user/abysal-theme/issues"
+  },
+  "keywords": [
+    "theme",
+    "abysal",
+    "obsidian",
+    "marble",
+    "light",
+    "dark"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "exports": {
+    "./*": "./*"
+  },
+  "icon": "icon.png",
+  "files": [
+    "LICENSE.md",
+    "extra/*",
+    "icon.png",
+    "docs/*.png",
+    "themes/*"
+  ],
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Abysal Marble",
+        "uiTheme": "vs",
+        "path": "./themes/abysal-marble.json"
+      },
+      {
+        "label": "Abysal Obsidian",
+        "uiTheme": "vs-dark",
+        "path": "./themes/abysal-obsidian.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsx scripts/index.ts",
+    "dev": "tsx watch scripts/index.ts",
+    "vscode:prepublish": "npm run build",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build",
+    "release": "bumpp --all",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.1",
+    "@antfu/utils": "^9.2.0",
+    "@types/color": "^4.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.3.0",
+    "@vscode/vsce": "^3.6.0",
+    "@xterm/xterm": "^5.5.0",
+    "bumpp": "^10.2.3",
+    "color": "^5.0.0",
+    "eslint": "^9.33.0",
+    "fs-extra": "^11.3.1",
+    "ovsx": "^0.10.5",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "vsxpub": "^0.1.0"
+  },
+  "preview": true
+}
